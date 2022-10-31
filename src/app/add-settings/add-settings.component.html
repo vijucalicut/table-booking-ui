@@ -1,0 +1,78 @@
+<!-- main app container -->
+<div class="card m-3">
+    <div class="card-body">
+        <div class="staff-component">
+            <p-toast></p-toast>
+            <ngx-spinner></ngx-spinner>
+        </div>
+        <form [formGroup]="settingsForm" (ngSubmit)="saveSettings()">
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label> Restaurant Name*</label>
+                    <input type="text" formControlName="restaurantName" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.restaurantName.errors }" />
+                    <div *ngIf="submitted && f.restaurantName.errors" class="invalid-feedback">
+                        <div *ngIf="f.restaurantName.errors.required">Restaurant Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label>Opening time*</label>
+                    <input type="time" formControlName="openingTime" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.openingTime.errors }" />
+                    <div *ngIf="submitted && f.openingTime.errors" class="invalid-feedback">
+                        <div *ngIf="f.openingTime.errors.required">Opening time is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label>Closing time*</label>
+                    <input type="time" formControlName="closingTime" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.closingTime.errors }" />
+                    <div *ngIf="submitted && f.closingTime.errors" class="invalid-feedback">
+                        <div *ngIf="f.closingTime.errors.required">Closing time is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label>Book Before(In hours)*</label>
+                    <input type="number" formControlName="bookBeforeHours" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.bookBeforeHours.errors }" />
+                    <div *ngIf="submitted && f.bookBeforeHours.errors" class="invalid-feedback">
+                        <div *ngIf="f.bookBeforeHours.errors.required">Book Before is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label>Email*</label>
+                    <input type="text" formControlName="emailId" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.emailId.errors }" />
+                    <div *ngIf="submitted && f.emailId.errors" class="invalid-feedback">
+                        <div *ngIf="f.emailId.errors.required">Email is required</div>
+                        <div *ngIf="f.emailId.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label>Phone*</label>
+                    <input type="text" formControlName="phoneNumber" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.phoneNumber.errors }" />
+                    <div *ngIf="submitted && f.phoneNumber.errors" class="invalid-feedback">
+                        <div *ngIf="f.phoneNumber.errors.required">Phone is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-group col-6">
+                <label>Total seats*</label>
+                <input type="number" formControlName="totalSeats" class="form-control"
+                    [ngClass]="{ 'is-invalid': submitted && f.totalSeats.errors }" />
+                <div *ngIf="submitted && f.totalSeats.errors" class="invalid-feedback">
+                    <div *ngIf="f.totalSeats.errors.required">Phone is required</div>
+                </div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mr-1">Add settings</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

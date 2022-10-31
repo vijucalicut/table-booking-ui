@@ -1,0 +1,76 @@
+{"staffDetails" : [{
+      "id": 1,
+      "name": "Radhika",
+      "contactEmail": "Radhika@gmail.com",
+      "department": "Test store",
+      "photo": "Test url"
+    },
+    {
+      "id": 3,
+      "name": "string",
+      "contactEmail": "string",
+      "department": "Test store",
+      "photo": "string"
+    },
+    {
+      "id": 4,
+      "name": "string",
+      "contactEmail": "string5",
+      "department": "Test store",
+      "photo": "string"
+    },
+    {
+      "id": 5,
+      "name": "Test employee",
+      "contactEmail": "employee@gmail.com",
+      "department": "Test store",
+      "photo": "photo test"
+    },
+    {
+      "id": 1,
+      "name": "Radhika",
+      "contactEmail": "Radhika@gmail.com",
+      "photo": "Test url"
+    },
+    {
+      "id": 3,
+      "name": "string",
+      "contactEmail": "string",
+      "photo": "string"
+    },
+    {
+      "id": 4,
+      "name": "string",
+      "contactEmail": "string5",
+      "photo": "string"
+    },
+    {
+      "id": 5,
+      "name": "Test employee",
+      "contactEmail": "employee@gmail.com",
+      "photo": "photo test"
+    },
+    {
+      "id": 1,
+      "name": "Radhika",
+      "contactEmail": "Radhika@gmail.com",
+      "photo": "Test url"
+    },
+    {
+      "id": 3,
+      "name": "string",
+      "contactEmail": "string",
+      "photo": "string"
+    },
+    {
+      "id": 4,
+      "name": "string",
+      "contactEmail": "string5",
+      "photo": "string"
+    },
+    {
+      "id": 5,
+      "name": "Test employee",
+      "contactEmail": "employee@gmail.com",
+      "photo": "photo test"
+    }]}

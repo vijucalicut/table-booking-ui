@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Redirect</title>
+    <script src="../assets/js-copy/oidc/oidc-client.js"></script>
+</head>
+<body>
+    <script>
+        new Oidc.UserManager({ response_mode: "query" }).signinRedirectCallback().then(function () {
+            debugger;
+            window.location = "index.html";
+        }).catch(function(e) {
+            console.error(e);
+        });
+    </script>
+</body>
+</html>

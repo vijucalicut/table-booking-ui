@@ -1,0 +1,18 @@
+.app-container{
+    width: 100%;
+    .header{
+        width: 100%;
+    }
+    .content-body{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        .left-nav{
+       
+        }
+        .router-outlet{
+            width: 82%;
+            padding: 120px 0px 0 0px;
+        }
+    }
+}

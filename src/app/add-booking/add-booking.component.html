@@ -1,0 +1,101 @@
+<!-- main app container -->
+
+<div class="card m-3">
+    <div class="mb-2" style="display:flex; align-items: center; width: 100%;background-color: #FBC02D;height: 25px;color: black;font-weight: 500;padding: 0 10px;">
+        {{openingTimeMessage}}
+    </div>
+    <div class="mb-2" style="display:flex; align-items: center; width: 100%;background-color: #FBC02D;height: 25px;color: black;font-weight: 500;padding: 0 10px;">
+       {{bookBeforeMessage}}
+    </div>
+    <div class="card-body">
+        <div class="staff-component">
+            <p-toast></p-toast>
+            <ngx-spinner></ngx-spinner>
+        </div>
+        <form [formGroup]="registerForm" (ngSubmit)="saveBooking()">
+          
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label> Name*</label>
+                    <input type="text" formControlName="name" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.name.errors }" />
+                    <div *ngIf="submitted && f.name.errors" class="invalid-feedback">
+                        <div *ngIf="f.name.errors.required">First Name is required</div>
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label>No of guests*</label>
+                    <input type="number" formControlName="noOfGuests" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.noOfGuests.errors }" />
+                    <div *ngIf="submitted && f.noOfGuests.errors" class="invalid-feedback">
+                        <div *ngIf="f.noOfGuests.errors.required">No of guests is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label>Booking Date*</label>
+                    <input type="date" formControlName="bookingDate" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.bookingDate.errors }" />
+                    <div *ngIf="submitted && f.bookingDate.errors" class="invalid-feedback">
+                        <div *ngIf="f.bookingDate.errors.required">Booking Date is required</div>
+                        <div *ngIf="f.bookingDate.errors.pattern">Booking Date must be a valid date in the format
+                            DD-MM-YYYY</div>
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label>From Time*</label>
+                    <input type="time" formControlName="fromTime" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.fromTime.errors }" />
+                    <div *ngIf="submitted && f.fromTime.errors" class="invalid-feedback">
+                        <div *ngIf="f.fromTime.errors.required">From time is required</div>
+                    </div>
+                </div>
+                <!-- <div class="form-group col-6">
+                    <label>Email</label>
+                    <input type="text" formControlName="email" class="form-control" [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div> -->
+            </div>
+            <div class="form-row">
+                <div class="form-group col-6">
+                    <label>Email*</label>
+                    <input type="text" formControlName="email" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.email.errors }" />
+                    <div *ngIf="submitted && f.email.errors" class="invalid-feedback">
+                        <div *ngIf="f.email.errors.required">Email is required</div>
+                        <div *ngIf="f.email.errors.email">Email must be a valid email address</div>
+                    </div>
+                </div>
+                <div class="form-group col-6">
+                    <label>Phone*</label>
+                    <input type="text" formControlName="phone" class="form-control"
+                        [ngClass]="{ 'is-invalid': submitted && f.phone.errors }" />
+                    <div *ngIf="submitted && f.phone.errors" class="invalid-feedback">
+                        <div *ngIf="f.phone.errors.required">Phone is required</div>
+                    </div>
+                </div>
+            </div>
+            <div class="form-row">
+                <div class="form-group col-12">
+                   <textarea rows="4" style="width: 100%;" disabled="disabled">
+                    Terms & conditions
+                   </textarea>
+                </div>
+            </div>
+            <div class="form-group form-check">
+                <input type="checkbox" formControlName="acceptTerms" id="acceptTerms" class="form-check-input"
+                    [ngClass]="{ 'is-invalid': submitted && f.acceptTerms.errors }" />
+                <label for="acceptTerms" class="form-check-label">Accept Terms & Conditions*</label>
+                <div *ngIf="submitted && f.acceptTerms.errors" class="invalid-feedback">Accept Ts & Cs is required</div>
+            </div>
+            <div class="text-center">
+                <button class="btn btn-primary mr-1">Book here</button>
+                <button class="btn btn-secondary" type="reset" (click)="onReset()">Cancel</button>
+            </div>
+        </form>
+    </div>
+</div>

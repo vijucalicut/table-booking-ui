@@ -1,0 +1,61 @@
+<!-- <div class="page-wrapper">
+
+    <div class="left-sidenav">
+        <div class="main-icon-menu">
+            <nav class="nav">
+                <div class="icon-bar">
+                   
+                    <div class="icon-menu" pTooltip="Dashboard"  (click)="checkActive('1')"  [ngClass]="{'active': activeFlag === '1' }"><i class="pi pi-microsoft dashboard-icon"></i></div> 
+                    <div class="icon-menu" pTooltip="Add Booking"  (click)="checkActive('2')"  [ngClass]="{'active': activeFlag === '2' }"><i class="fa fa-users-cog"></i></div> 
+                    <div class="icon-menu" pTooltip="Booking List"  (click)="checkActive('3')"  [ngClass]="{'active': activeFlag === '3' }"><i class="fa fas fa-tablet-alt"></i></div> 
+                    <div class="icon-menu" pTooltip="Add Settings"  (click)="checkActive('4')"  [ngClass]="{'active': activeFlag === '4' }"><i class="fas fa-cogs"></i></div> 
+                  </div>
+            </nav>
+        </div>
+    </div>
+</div> -->
+
+
+
+
+<div class="main-sidebar">
+    <aside id="sidebar-wrapper">
+    <div class="sidebar-brand">
+            <img src="assets/admin/img/avatar/avatar-1.png'" class="img-responsive img-logo">
+        </div>
+
+        <div class="input-group px-3">
+        <input type="text" class="form-control searchTerm" id="searchText" placeholder="Search Menu" autocomplete="off">
+        <div class="input-group-append">
+            <div class="input-group-text menu-search-icon">
+                <i class="fas fa-search search-sign"></i>
+                <i class="fas fa-times close-sign"></i>
+            </div>
+        </div>
+       <!--  <div class="no-results mt-3 ml-1">No matching records found.</div> -->
+    </div>
+
+
+
+
+
+      <div class="sidebar-brand sidebar-brand-sm">
+          <a href="dashbord">St</a>
+      </div>
+
+      <ul class="sidebar-menu">
+          <!-- <li class="menu-header" >Dashboard</li> -->
+          <li class="nav-item dropdown active" >
+            <a routerLink="/add-booking"  ><i class="fa fa-database" aria-hidden="true"></i><span>Book your table</span></a>
+          </li>
+
+          <li class="nav-item dropdown">
+            <a routerLink="/list-booking"><i class="fa fa-list" aria-hidden="true"></i><span>Booking List </span></a></li>
+
+            <li>
+            <a routerLink="add-settings"><i class="fa fa-file" aria-hidden="true"></i><span>Add Settings </span></a></li>
+            <li>
+           
+        </ul>
+    </aside>
+  </div>

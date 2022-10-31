@@ -1,0 +1,86 @@
+
+.dashboard-component{
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 100px);
+    padding: 30px 25px 25px 25px;
+    overflow: hidden;
+}
+
+.card-container{
+    .card-1{
+        background-color: cornflowerblue;
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        color: white;
+        .count{
+            font-size: 33px;
+            line-height: 0.5 !important;
+        }
+    }
+    .card-2{
+        background-color: #e7505a;
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        color: white;
+        .count{
+            font-size: 33px;
+            line-height: 0.5 !important;
+        }
+    }
+    .card-3{
+        background-color: #32c5d2;
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        color: white;
+        .count{
+            font-size: 33px;
+            line-height: 0.5 !important;
+        }
+    }
+    .card-4{
+        background-color: #8E44AD;
+        height: 120px;
+        width: 100%;
+        display: flex;
+        justify-content: flex-end;
+        padding: 0 10px;
+        color: white;
+        .count{
+            font-size: 33px;
+            line-height: 0.5 !important;
+        }
+    }
+}
+
+.bar-chart{
+    height: 400px;
+    padding-top: 35px;
+}
+
+.pie-chart{
+    height: 400px;
+    padding-top: 35px;
+}
+
+.chart-header{
+    margin: 15px 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.dashboard-body{
+   height: calc(100vh - 250px);
+   overflow-y: auto;
+   overflow-x: hidden;
+}
+

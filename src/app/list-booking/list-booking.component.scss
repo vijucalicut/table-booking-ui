@@ -1,0 +1,40 @@
+.add-device-container{
+    background-color: white;
+    width: 100%;
+    height: calc(100vh - 75px);
+    padding: 0 10px 0 35px;
+}
+
+.active-data {
+    background-color: #36c6d3;
+    color: white;
+    /* height: 20px; */
+    display: flex;
+    align-items: center;
+    width: auto;
+    /* overflow: hidden; */
+    display: inline-block;
+    padding: 1px 10px;
+}
+
+.in-active-data{
+    background-color: #ed6b75;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: auto;
+    /* overflow: hidden; */
+    display: inline-block;
+    padding: 1px 10px;
+}
+
+.ready-for-approval{
+    background-color: #e2c103;
+    color: white;
+    display: flex;
+    align-items: center;
+    width: auto;
+    /* overflow: hidden; */
+    display: inline-block;
+    padding: 1px 10px;
+}
